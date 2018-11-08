@@ -1,13 +1,9 @@
 $(function (){
-
-	$('.cards').on('click', '.card', function(event) {
-		$(this).toggleClass('card--open');
-	});
+	
 	
 	$('.cards').on('click', '.card__like', function(event) {
 		event.stopPropagation();
 		event.preventDefault();
-		// $(this).toggleClass('card__like--red');
 
 		var target = $(this).siblings('.card__hidden')
 							.find('.social__element')
@@ -26,11 +22,6 @@ $(function (){
 		}
 	});
 
-	$('.cards').on('click', '.card__follow-btn', function() {
-		event.stopPropagation();
-		event.preventDefault();
-		$(this).toggleClass('card__follow-btn--following');
-	});
 
 	$('#image').on('change', function(event) {
 		var fileName = $(this).val();
@@ -50,12 +41,10 @@ $(function (){
 		event.preventDefault();
 
 		var title 		= $('#name').val();
+		var comment 	= $('#comment').val();
 		var image 		= $('#image').val();
-		var author 		= $('#author').val();
 		var name	    = $('select#author').children(':selected').text();
-		var followers 	= $('#followers').val();
 		var likes 		= $('#likes').val();
-		var following 	= $('#following').val();
 
 
 		$('.cards').append(`<li class="card">
@@ -63,12 +52,15 @@ $(function (){
         <img class="card__img" src="./assets/images/squared/${image}" alt="">
       </div>
       <div class="card__content">
-        <div class="card__profile-container">
-          <img class="card__profile" src="./assets/images/profiles/${author}" alt="">
-        </div>
+
         <div class="card__title">
           <h2>${title}</h2>
         </div>
+
+        <div class="card__comment">
+          <h5>${comment}</h5>
+        </div>
+
         <div class="card__author">
           <h3 class="card__author-name">${name}</h3>
         </div>
@@ -77,18 +69,12 @@ $(function (){
         </a>
         <div class="card__hidden">
           <ul class="social">
-            <li class="social__element">
-              <div class="social__number">${followers}</div>
-              <div class="social__text">Followers</div>
-            </li>
+
             <li class="social__element">
               <div class="social__number">${likes}</div>
               <div class="social__text">Likes</div>
             </li>
-            <li class="social__element">
-              <div class="social__number">${following}</div>
-              <div class="social__text">Following</div>
-            </li>
+
           </ul>
           <div class="card__follow">
             <button class="card__follow-btn">Seguir</button>

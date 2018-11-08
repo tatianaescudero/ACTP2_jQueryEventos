@@ -5,7 +5,7 @@ body {
 }
 
 h1,h2,h3 {
-  font-family: 'KelsonSans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .header__main {
@@ -14,7 +14,7 @@ h1,h2,h3 {
 }
 
 .header__title {
-  color: tomato;
+  color: gray;
   text-align: center;
   text-transform: uppercase;
 }
@@ -64,26 +64,18 @@ h1,h2,h3 {
 .card__highlight {
   border-radius: 5px 5px 0 0;
   cursor: pointer;
-  height: 370px;
+  height: 200px;
   overflow: hidden;
   position: relative;
   transition: all .5s ease-in-out;
 }
 
-.card--open .card__highlight {
-  height: 512px;
-}
-
 .card__content {
   background-color: #fff;
   border-radius: 0 0 5px 5px;
-  min-height: 76px;
+  min-height: 130px;
   position: relative;
   transition: min-height .5s;
-}
-
-.card--open .card__content {
-  min-height: 100px;
 }
 
 .card__profile-container {
@@ -93,11 +85,6 @@ h1,h2,h3 {
   top: -125px;
   transition: all .25s ease-in-out;
   width: 120px;
-}
-
-.card--open .card__profile-container {
-  opacity: 1;
-  top: -85px;
 }
 
 .card__profile {
@@ -122,11 +109,15 @@ h1,h2,h3 {
   width: 350px;
 }
 
-.card--open .card__title {
-  clear: both;
-  color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,.75);
-  top: -60px;
+.card__comment {
+  font-size: 0.2rem;
+  padding: 10% 2%;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  transition: all .25s ease-in;
+  top: 0;
+  width: 300px;
 }
 
 .card__author {
@@ -139,10 +130,6 @@ h1,h2,h3 {
   width: 350px;
 }
 
-.card--open .card__author {
-  opacity: 1;
-}
-
 .card__author-name {
   font-weight: 200;
   text-align: right;
@@ -151,14 +138,10 @@ h1,h2,h3 {
 .card__like {
   color: #ccc;
   display: block;
-  padding: 28px 0 0 20px;
+  padding: 80px 0 0 20px;
   text-align: center;
   transition: all .35s ease-out;
   width: 120px;
-}
-
-.card--open .card__like {
-  padding-top: 55px;
 }
 
 .card__like--red {
@@ -195,7 +178,6 @@ h1,h2,h3 {
 .social__text {
   font-family: 'Open Sans';
 }
-
 
 .social__number {
   font-size: 2.1em;
@@ -249,6 +231,11 @@ h1,h2,h3 {
 
 .create__title {
   color: tomato;
+  text-align: center;
+}
+
+.create__comment {
+  color: gray;
   text-align: center;
 }
 
