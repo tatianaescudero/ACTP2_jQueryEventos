@@ -50,7 +50,7 @@ h1,h2,h3 {
 .cards {
   margin: 50px auto;
   padding: 0;
-  max-width: 512px;
+  max-width: 530px;
 }
 
 .card {
@@ -79,12 +79,11 @@ h1,h2,h3 {
 }
 
 .card__profile-container {
-  left: 20px;
-  opacity: 0;
-  position: absolute;
-  top: -125px;
-  transition: all .25s ease-in-out;
-  width: 120px;
+	left: 20px;
+    position: absolute;
+    top: -65px;
+    transition: all .25s ease-in-out;
+    width: 120px;
 }
 
 .card__profile {
@@ -146,12 +145,6 @@ h1,h2,h3 {
 
 .card__like--red {
   color: tomato;
-}
-
-.card__hidden {
-  height: 0;
-  overflow: hidden;
-  transition: all .5s ease-in-out;
 }
 
 .card--open .card__hidden {
